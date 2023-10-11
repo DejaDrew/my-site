@@ -10,7 +10,7 @@ export default function About() {
   const { ref } = useSectionInView('About');
 
   return (
-    <motion.section className='mb-28 md:text-lg  max-w-[65rem] md:text-center leading-7  md:leading-8 sm:mb-40 scroll-mt-32 inner-pad' ref={ref}  id="about" >
+    <motion.section className='mb-28 md:text-lg xl:text-[1.3rem]  max-w-[65rem] xl:max-w-[80rem] md:text-center leading-7  md:leading-8 lg:leading-9 sm:mb-40 scroll-mt-32 inner-pad' ref={ref}  id="about" >
         
         <motion.div
           initial={{ opacity: 0 }}

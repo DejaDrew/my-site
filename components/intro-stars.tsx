@@ -16,7 +16,7 @@ export default function IntroStars() {
     const stars: { x: number; y: number; z: number; size: number }[] = [];
     let numStars: number;
 
-    const density = 2000; // lower is more dense 
+    const density = 1500; // lower is more dense 
     const speed = 0.003;
     const maxZ = 100;
 

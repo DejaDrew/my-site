@@ -23,7 +23,7 @@ export default function Intro() {
       animate={{ opacity: 1 }}
       className='intro-bg w-full relative mb-[10rem] overflow-hidden '>
       <IntroStars />
-      <div className='flex flex-col items-center text-slate-400 z-2 absolute pt-[100px] md:pt-0 md:w-full md:top-[50%] md:translate-y-[-50%]'>
+      <div className='flex flex-col items-center text-slate-400 z-2 absolute pt-[100px] md:pt-0 md:w-full md:top-[50%] md:translate-y-[-50%] lg:pb-15'>
       <section ref={ref} id='home' className='lg:max-w-[75vw] 2xl:max-w-[50vw] text-center scroll-mt-[100rem]'>
           { 
             <div className='flex items-center justify-center'>
@@ -32,7 +32,7 @@ export default function Intro() {
                     initial={{ opacity: 0, scale: .5 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 3, type: 'spring', stiffness: 260, delay: 0.1}}>
-                    <Image src={headshot} width={192} height={192} quality={96} priority={true} className='h-[10vw] w-[10vw] min-w-[140px] min-h-[140px] rounded-full object-cover shadow-xl shadow-black/50 border-[0.25rem] border-slate-400' alt="Andrew Erie" />
+                    <Image src={headshot} width={192} height={192} quality={96} priority={true} className='h-[10vw] w-[10vw] min-w-[140px] min-h-[140px] max-w-[220px] max-h-[220px] rounded-full object-cover shadow-xl shadow-black/50 border-[0.25rem] border-slate-400' alt="Andrew Erie" />
                   </motion.div>                  
               </div>
             </div> 

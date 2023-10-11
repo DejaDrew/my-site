@@ -23,13 +23,13 @@ export default function Skills() {
   }
 
   return (
-    <section ref={ref} id='skills' className='mb-28  max-w-[53rem] scroll-mt-28 text-center inner-pad md:mb-[20rem] md:mt-12' >
+    <section ref={ref} id='skills' className='mb-28  max-w-[53rem] lg:max-w-[60rem] scroll-mt-28 text-center inner-pad md:mb-[20rem] md:mt-12' >
       <SectionHeading>Featured Skills</SectionHeading>
       <ul className='flex flex-wrap justify-center gap-3 md:gap-4 text-md text-gray-100'>
         {
           skillsData.map((skill, index) => (
             <motion.li 
-              className='bg-zinc-950/40 border border-gray-100/[0.15] rounded-xl text-sm md:text-md shadow-md shadow-black/30 px-3 py-2 md:px-4 md:py-2 ' 
+              className='bg-zinc-950/40 border border-gray-100/[0.15] rounded-xl text-sm md:text-md lg:text-lg shadow-md shadow-black/30 px-3 py-2 md:px-4 md:py-2 ' 
               variants={fadeInAnimationVariants}
               initial='initial'
               whileInView='animate'

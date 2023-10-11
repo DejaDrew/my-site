@@ -10,9 +10,9 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
   title: 'Andrew | Personal Portfolio',
-  description: 'replace this',
+  description: 'Focused on Integration, Sales Engineering, SaaS, and AI with over 25 years of experience in the technology field.',
 }
-
+ 
 export default function RootLayout({
   children,
 }: {

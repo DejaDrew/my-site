@@ -18,8 +18,9 @@ export default function IntroStars() {
     const speed = 0.003;
     const maxZ = 100;
 
-    function init() {
+    function init() {      
       if(!canvas) return;
+      canvas.width = document.body.clientWidth;   
       for (let i = 0; i < numStars; i++) {
         stars.push({
           x: Math.random() * canvas.width,

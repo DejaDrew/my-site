@@ -20,6 +20,7 @@ export default function IntroStars() {
     const speed = 0.003;
     const maxZ = 100;
 
+    
     function init() {      
       if(!canvas) return;      
       stars.length = 0;
@@ -34,6 +35,7 @@ export default function IntroStars() {
         });
       }
     }
+
 
     function update() {
 

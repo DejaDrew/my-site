@@ -10,8 +10,7 @@ export default function Home() {
       <Intro />  
       <About />    
       <Skills />
-      <Experience />
-      
+      <Experience />      
       <Contact />
     </main>
   )

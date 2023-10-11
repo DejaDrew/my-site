@@ -18,7 +18,7 @@ export default function Header() {
             className='nav-container'
             initial={{ y: -100, x:"-50%", opacity: 0}}
             animate={{ y: 0, x:"-50%", opacity: 1}}
-            transition={{ type: "spring", ease: "ease", duration: 1, delay: .1, stiffness: 150 }}
+            transition={{ type: "spring", ease: "ease", duration: 2, delay: .1, stiffness: 150 }}
         ></motion.div>
         <nav className='flex fixed top-[0.15rem] left-1/2 h-12 -translate-x-1/2 py-2 sm:top-[1.7rem] sm:h-[initial] sm:py-0'>
             <ul className='flex w-[22rem] flex-wrap items-center justify-center gap-y-1 text-[1rem] font-medium text-gray-300 sm:w-[initial] sm:flex-nowrap sm:gap-5'>

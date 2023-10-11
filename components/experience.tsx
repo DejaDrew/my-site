@@ -14,7 +14,7 @@ export default function Experience() {
     <section id="experience" ref={ref} className="scroll-mt-28 mb-28 sm:mb-80 w-full max-w-[100rem] inner-pad relative">
       <SectionHeading>Recent experience</SectionHeading>
       <div className="xl:bg-zinc-700/70 xl:mt-5 xl:absolute xl:left-1/2 xl:h-full xl:w-[2px]"></div>
-      <div className="verticalTimeline pt-20 -mb-[6rem]"> 
+      <div className="verticalTimeline mt-20 md:mt-0 md:pt-20 -mb-[6rem]"> 
         {experiencesData.map((item, index) => (
           <React.Fragment key={index}>
             <div className="group vt-item max-w-[800px] ml-auto mr-auto xl:ml-0 xl:even:mr-0 xl:w-[50%] xl:-mt-[8rem] xl:pr-10 xl:even:pr-0 xl:even:pl-10 xl:first:mt-0 xl:even:ml-auto relative ">
@@ -38,11 +38,12 @@ export default function Experience() {
                 whileInView={{ opacity: 1, scale:1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 5, type: 'spring', stiffness: 360}}
-                className=" bg-zinc-950/40 mb-10 rounded-2xl border border-gray-100/20 shadow-lg shadow-black/50 text-gray-100 p-10 "
+                className=" md:bg-zinc-950/40 mb-10 md:rounded-2xl md:border md:border-gray-100/20 md:shadow-lg md:shadow-black/50 text-gray-100 md:p-10 "
               >             
                 
-                <h3 className="font-semibold text-xl capitalize">{item.company}</h3>
-                <p className="font-normal text-gray-500 mb-8">{item.location}</p>   
+                <h3 className="font-semibold text-xl capitalize text-center md:text-left">{item.company}</h3>
+                <p className="font-normal text-gray-500 mb-8 text-center md:text-left">{item.location}</p>  
+
                 <ul>
                 {
                   item.jobs.map((job, index2) => (                  
@@ -71,7 +72,7 @@ export default function Experience() {
           </React.Fragment>       
         ))}
       </div>
-      <div className="flex pt-10 relative top-[126px]">
+      <div className="hidden lg:flex pt-10 relative top-[126px]">
         <a href="/resume.pdf" download className="bg-zinc-950/90 bottom-5 mx-auto text-sm text-zinc-100/30 border border-zinc-100/10 px-5 py-2 rounded-full z-10 hover:border-zinc-100/30 transition hover:text-zinc-100/50">My extended work history is on my resume</a>
       </div>
     </section>

@@ -14,13 +14,17 @@ export default function IntroStars() {
     let animationFrameId: number;
 
     const stars: { x: number; y: number; z: number; size: number }[] = [];
-    const numStars = 2000;
+    let numStars: number;
+
+    const density = 2000; // lower is more dense 
     const speed = 0.003;
     const maxZ = 100;
 
     function init() {      
-      if(!canvas) return;
-      canvas.width = document.body.clientWidth;   
+      if(!canvas) return;      
+      stars.length = 0;
+      canvas.width = document.body.clientWidth;  
+      numStars = Math.floor((canvas.width * canvas.height) / density);
       for (let i = 0; i < numStars; i++) {
         stars.push({
           x: Math.random() * canvas.width,
@@ -33,9 +37,9 @@ export default function IntroStars() {
 
     function update() {
 
-      if(!context || !canvas) return;
+      if(!context || !canvas) return; 
 
-      canvas.width = document.body.clientWidth;       
+      canvas.width = document.body.clientWidth;  
 
       context.clearRect(0, 0, canvas.width, canvas.height);
 
@@ -69,15 +73,31 @@ export default function IntroStars() {
       });
 
       animationFrameId = window.requestAnimationFrame(update);
+
     }
     
     init();
     update();
 
+    let resizeTimeout: NodeJS.Timeout;
+
+    function handleResize() {
+      clearTimeout(resizeTimeout);
+      resizeTimeout = setTimeout(() => {
+        init();
+      }, 100);
+    }
+
+    window.addEventListener('resize', handleResize);
+
     return () => {
+      window.removeEventListener('resize', handleResize);
       window.cancelAnimationFrame(animationFrameId);
     };
+
   }, []);
 
   return <canvas ref={canvasRef} className="absolute z-1" height={1500}></canvas>;
 }
+      
+      

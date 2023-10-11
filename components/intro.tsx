@@ -46,7 +46,7 @@ export default function Intro() {
             <span className="font-bold"> Integration, Sales Engineering, SaaS, and AI</span> with over{" "}
             <span className="font-bold">25 years of experience</span> in the technology field. I enjoy
             building <span className="italic">relationships & enjoyable technology experiences</span>. {" "}
-            <span className="font-bold">Lets connect!</span>
+            <span className="font-bold">Let's connect!</span>
           </motion.h1>
 
           <motion.div

@@ -21,7 +21,7 @@ body{
 }
 
 .intro-bg{
-  background: radial-gradient(ellipse at bottom, #27587d9d 10%, #0a040dcb 100%);
+  background: radial-gradient(ellipse at bottom, #206e9f99 00%, #0c031ba2 90%);
   border-bottom:1px solid #494949;
   box-shadow: inset 0px -10px 30px 10px rgba(0,0,0,.2);
   min-height: max(calc(100vh - 40px), 800px);

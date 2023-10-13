@@ -47,7 +47,7 @@ export default function IntroStars() {
 
       stars.forEach((star) => {
         
-        star.y += (speed * star.z)+.005;
+        star.y -= (speed * star.z)+.005;
         star.x += ((speed * star.z)+.005)/2;
         
         if (star.y < 0) {

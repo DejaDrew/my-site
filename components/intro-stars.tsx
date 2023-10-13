@@ -17,7 +17,7 @@ export default function IntroStars() {
     let numStars: number;
 
     const density = 1500; // lower is more dense 
-    const speed = 0.003;
+    const speed = 0.0015;
     const maxZ = 100;
 
     
@@ -69,7 +69,7 @@ export default function IntroStars() {
         context.beginPath();
         context.arc(star.x, star.y, star.size, 0, 2 * Math.PI);
         
-        context.fillStyle = `rgba(255, 255, 255, ${ ((star.z / maxZ)-.3) })`;
+        context.fillStyle = `rgba(255, 255, 255, ${ ((star.z / maxZ)) })`;
         context.fill();
         
       });
@@ -99,7 +99,7 @@ export default function IntroStars() {
 
   }, []);
 
-  return <canvas ref={canvasRef} className="absolute z-1" height={1500}></canvas>;
+  return <canvas ref={canvasRef} className="absolute z-1 opacity-50" height={1500}></canvas>;
 }
       
       

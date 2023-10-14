@@ -1,15 +1,8 @@
-"use client";
-
 import React from 'react'
-import { motion } from 'framer-motion'
 
 export default function SectionDivider() {
   return (
-    <motion.div 
-        className='bg-gray-200 my-24 h-16 w-1 rounded-full hidden sm:block'
-        initial={{ opacity: 0, y: 100 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.125}}
-    ></motion.div>
+    <div className='md:bg-zinc-700/40 m-8 md:m-40 w-[40vw] h-[2px] relative rounded-full'>     
+    </div>
   )
 }

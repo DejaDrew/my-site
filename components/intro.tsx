@@ -23,7 +23,7 @@ export default function Intro() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1.5}}
-      className='intro-bg w-full relative  mb-[5rem] md:mb-[10rem] overflow-hidden '>
+      className='intro-bg w-full relative overflow-hidden '>
       
       <motion.div 
         initial={{ opacity: 0 }}

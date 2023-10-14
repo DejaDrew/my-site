@@ -8,6 +8,32 @@ interface BoxProps {
   rotationSpeed: number;
 }
 
+export default function IntroThreeJs() {
+
+  const offy = 0.33;
+
+  const [boxes, setBoxes] = useState<{ position: [number, number, number], rotation: [number, number, number], rotationSpeed: number }[]>([
+    { position: [0, 0, 0], rotation: [0, 0 - offy, 0], rotationSpeed: 0.0003 },
+    { position: [0, 0, 0], rotation: [0, 0.88 - offy, -0.5], rotationSpeed: 0.00006 },
+    { position: [0, 0, .1], rotation: [0, -0.68 - offy, 0.5], rotationSpeed: 0.00008 },
+  ]);
+
+  return (
+    <div className="three-bg h-full w-full opacity-[60%] absolute">
+      <Canvas shadows="soft" camera={{ fov: 55, position: [0, 0, 15], rotation: [0, 0, 0.62] }}>
+        <group>
+          <ambientLight intensity={0} />
+          <pointLight position={[-10, 0, 15]} intensity={400} castShadow shadow-mapSize={[2048, 2048]} />
+          <pointLight position={[5, 15, 10]} intensity={300} castShadow shadow-mapSize={[2048, 2048]} />
+          {boxes.map((box, index) => (
+            <Box key={index} position={box.position} rotation={box.rotation} rotationSpeed={box.rotationSpeed} />
+          ))}
+        </group>
+      </Canvas>
+    </div>
+  );
+}
+
 function Box({ position, rotation, rotationSpeed }: BoxProps) {
   const tref = useRef<any>();
   const [currentRotation, setCurrentRotation] = useState(rotation);
@@ -27,35 +53,9 @@ function Box({ position, rotation, rotationSpeed }: BoxProps) {
   });
 
   return (
-    <mesh {...{ position, rotation }} ref={tref} scale={6}>
+    <mesh {...{ position, rotation }} ref={tref} scale={6} castShadow receiveShadow>
       <boxGeometry args={[2, 4, 2]} />
       <meshStandardMaterial color="#1f293f" metalness={0.9} roughness={0.7} envMapIntensity={3} />
     </mesh>
-  );
-}
-
-export default function IntroThreeJs() {
-
-  const offy = 0.33;
-
-  const [boxes, setBoxes] = useState<{ position: [number, number, number], rotation: [number, number, number], rotationSpeed: number }[]>([
-    { position: [0, 0, 0], rotation: [0, 0 - offy, 0], rotationSpeed: 0.0003 },
-    { position: [0, 0, 0], rotation: [0, 0.88 - offy, -0.5], rotationSpeed: 0.00006 },
-    { position: [0, 0, .1], rotation: [0, -0.68 - offy, 0.5], rotationSpeed: 0.00008 },
-  ]);
-
-  return (
-    <div className="three-bg h-full w-full opacity-[60%] absolute">
-      <Canvas camera={{ fov: 55, position: [0, 0, 15], rotation: [0, 0, 0.62] }}>
-        <group>
-          <ambientLight intensity={0} />
-          <pointLight position={[-10, 0, 15]} intensity={400} />
-          <pointLight position={[5, 15, 10]} intensity={300} />
-          {boxes.map((box, index) => (
-            <Box key={index} position={box.position} rotation={box.rotation} rotationSpeed={box.rotationSpeed} />
-          ))}
-        </group>
-      </Canvas>
-    </div>
   );
 }

@@ -28,7 +28,7 @@ body{
 }
 
 .type-writer{
-  @apply font-bold text-2xl md:text-[3rem] pt-7 pb-10 block text-shadow-lg;
+  @apply font-bold text-2xl md:text-[2.5rem] lg:text-[3rem] 2xl:text-[3.5rem]  pt-7 pb-10 2xl:pt-10 2xl:pb-12  block text-shadow-lg;
   background: -webkit-linear-gradient(#fff 30%, #83b9de);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

@@ -33,7 +33,7 @@ export default function Intro() {
         <IntroThreeJs />
       </motion.div>
       <div className='flex flex-col items-center text-slate-400 z-2 absolute pt-[100px] md:pt-0 md:w-full md:top-[50%] md:translate-y-[-50%] lg:pb-15'>
-      <section ref={ref} id='home' className='lg:max-w-[75vw] 2xl:max-w-[50vw] text-center scroll-mt-[100rem]'>
+      <section ref={ref} id='home' className='lg:max-w-[75vw] xl:max-w-[45rem] text-center scroll-mt-[100rem]'>
           { 
             <div className='flex items-center justify-center'>
               <div className='relative'>
@@ -48,7 +48,7 @@ export default function Intro() {
           }
 
           <motion.h1
-            className="intro mb-7 md:mb-14 mt-8 px-4 text-2xl font-medium !leading-[1.6] text-[1.2rem] sm:text-[1.6rem] md:text-3xl xl:text-3xl 2xl:text-[1.7vw] text-shadow-lg shadow-black/50"
+            className="intro mb-7 md:mb-14 mt-8 px-4 text-2xl font-medium !leading-[1.6] text-[1.2rem] sm:text-[1.6rem] md:text-2xl xl:text-2xl  text-shadow-lg shadow-black/50"
             initial={{ opacity: 0, y: 100 }}
             animate={{ opacity: 1, y: 0 }}
           >
@@ -64,13 +64,13 @@ export default function Intro() {
 								delaySpeed={1750}	
 							/>
             </span>                       
-            <p className=' md:text-2xl'>with over{" "}
+            <p className=''>with over{" "}
             <span className="font-bold">25 years of experience</span> in the technology field. I enjoy
             building <span className="italic">relationships & enjoyable technology experiences</span>. {" "}
             <span className="font-bold">Let's connect!</span> </p>           
           </motion.h1>
           
-{/*           
+          {/*           
           <motion.h1
             className="intro mb-7 md:mb-14 mt-8 px-4 text-2xl font-medium !leading-[1.6] text-[1.2rem] sm:text-[1.6rem] md:text-3xl xl:text-3xl 2xl:text-[1.7vw] text-shadow-lg shadow-black/50"
             initial={{ opacity: 0, y: 100 }}

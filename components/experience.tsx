@@ -48,7 +48,7 @@ export default function Experience() {
                 {
                   item.jobs.map((job, index2) => (                  
                     <React.Fragment key={index2}>
-                      <li className="flex flex-col mb-10 last:mb-0 pl-8 border-l-8 border-l-slate-500/10 ">
+                      <li className="flex flex-col mb-10 last:mb-0 pl-4 md-pl-8 border-l-8 border-l-slate-500/10 ">
                         <h4 className="text-slate-200/95 font-semibold capitalize mb-1">{job.title}</h4>
                         <p className="font-normal text-gray-500 mb-3">{job.date}</p>  
                         <p className="font-normal text-gray-300 block mb-5">{job.short}</p> 

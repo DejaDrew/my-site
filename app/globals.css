@@ -4,7 +4,7 @@
 
 html{
   --line-color:rgb(0,0,0,.05);
-  background: radial-gradient(#34373b 0%,#000000 100%); 
+  background: radial-gradient(#232629 10%,#000000 100%); 
 }
 
 .borderBlack{
@@ -17,18 +17,25 @@ body{
 
 .nav-container{
   background: linear-gradient(180deg, #595f66af 0%,  #22252c83 100%);
-  @apply fixed top-0 left-1/2 h-[4.5rem] w-full rounded-none border-zinc-700  shadow-lg shadow-black/[0.3] backdrop-blur-[0.5rem] sm:top-6 sm:h-[3.4rem] sm:w-[34rem] sm:rounded-full;
+  @apply fixed top-0 left-1/2 h-[4.6rem] w-full rounded-none border-zinc-700  shadow-lg shadow-black/[0.3] backdrop-blur-[0.5rem] sm:top-6 sm:h-[3.4rem] sm:w-[34rem] sm:rounded-full;
 }
 
 .intro-bg{
-  background: radial-gradient(ellipse at bottom, #206e9f99 00%, #0c031ba2 90%);
-  border-bottom:1px solid #494949;
+  background: radial-gradient(ellipse at bottom, #2d82c899 00%, #05031ba2 90%);
+  border-bottom:1px solid #303030;
   box-shadow: inset 0px -10px 30px 10px rgba(0,0,0,.2);
   min-height: max(calc(100vh - 40px), 800px);
 }
 
+.type-writer{
+  @apply font-bold text-2xl md:text-[3rem] pt-7 pb-10 block text-shadow-lg;
+  background: -webkit-linear-gradient(#fff 30%, #83b9de);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .intro .font-bold{
-  color:#fff;
+  color:#ffffffd2;
 }
 
 .introBtn{
@@ -36,7 +43,7 @@ body{
 }
 
 .btnDark{
-  @apply bg-gray-950/70 text-white/80 hover:bg-gray-950/90 hover:text-white/90 border-black/10
+  @apply bg-gray-950/70 text-white/80 hover:bg-gray-950/90 hover:text-white/90 border-slate-700/50
 }
 
 .btnLight{
@@ -48,7 +55,7 @@ body{
 }
 
 .inner-pad{
-  @apply px-5;
+  @apply px-7;
 }
 
 .inputs{

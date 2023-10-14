@@ -10,7 +10,8 @@ import { useActiveSectionContext } from '@/context/active-section-context';
 import headshot from "@/public/Andrew.jpg";
 import { BsArrowRight, BsLinkedin } from 'react-icons/bs';
 import { HiDownload } from 'react-icons/hi';
-
+import IntroThreeJs from './intro-threejs';
+import { Typewriter } from 'react-simple-typewriter'
 
 export default function Intro() {
 
@@ -21,8 +22,16 @@ export default function Intro() {
     <motion.div 
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      className='intro-bg w-full relative mb-[10rem] overflow-hidden '>
-      <IntroStars />
+      transition={{ duration: 1.5}}
+      className='intro-bg w-full relative  mb-[5rem] md:mb-[10rem] overflow-hidden '>
+      
+      <motion.div 
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 3}}
+      >      
+        <IntroThreeJs />
+      </motion.div>
       <div className='flex flex-col items-center text-slate-400 z-2 absolute pt-[100px] md:pt-0 md:w-full md:top-[50%] md:translate-y-[-50%] lg:pb-15'>
       <section ref={ref} id='home' className='lg:max-w-[75vw] 2xl:max-w-[50vw] text-center scroll-mt-[100rem]'>
           { 
@@ -37,6 +46,31 @@ export default function Intro() {
               </div>
             </div> 
           }
+
+          <motion.h1
+            className="intro mb-7 md:mb-14 mt-8 px-4 text-2xl font-medium !leading-[1.6] text-[1.2rem] sm:text-[1.6rem] md:text-3xl xl:text-3xl 2xl:text-[1.7vw] text-shadow-lg shadow-black/50"
+            initial={{ opacity: 0, y: 100 }}
+            animate={{ opacity: 1, y: 0 }}
+          >
+            <span className="font-bold">Hi, I'm Andrew,</span> throughout my career I've worked as a{" "} <br />
+            <span className="type-writer">
+            <Typewriter
+								words={['Director of Frontend', 'Sr. Systems Engineer', 'Sales Engineer', 'Subject Matter Expert', 'UI/UX Specialist', 'Designer', 'Full Stack Developer', 'Consultant', 'Creative Director','Business Owner','Photographer']}
+								loop={99}
+								cursor
+								cursorStyle='_'
+								typeSpeed={50}
+								deleteSpeed={25}
+								delaySpeed={1750}	
+							/>
+            </span>                       
+            <p className=' md:text-2xl'>with over{" "}
+            <span className="font-bold">25 years of experience</span> in the technology field. I enjoy
+            building <span className="italic">relationships & enjoyable technology experiences</span>. {" "}
+            <span className="font-bold">Let's connect!</span> </p>           
+          </motion.h1>
+          
+{/*           
           <motion.h1
             className="intro mb-7 md:mb-14 mt-8 px-4 text-2xl font-medium !leading-[1.6] text-[1.2rem] sm:text-[1.6rem] md:text-3xl xl:text-3xl 2xl:text-[1.7vw] text-shadow-lg shadow-black/50"
             initial={{ opacity: 0, y: 100 }}
@@ -47,7 +81,7 @@ export default function Intro() {
             <span className="font-bold">25 years of experience</span> in the technology field. I enjoy
             building <span className="italic">relationships & enjoyable technology experiences</span>. {" "}
             <span className="font-bold">Let's connect!</span>
-          </motion.h1>
+          </motion.h1> */}
 
           <motion.div
             className='flex flex-col sm:flex-row items-center justify-center gap-5 px-4 mb-20p text-lg font-medium'

@@ -38,16 +38,10 @@ export default function IntroThreeJs() {
 
   const offy = 0.33;
 
-  const [boxRotations, setBoxRotations] = useState<[number, number, number, number][]>([
-    [0, 0 - offy, 0, 0.0003],
-    [0, 0.88 - offy, -0.5, 0.00006],
-    [0, -0.68 - offy, 0.5, 0.00008],
-  ]);
-
-  const [boxPositions, setBoxPositions] = useState<[number, number, number][]>([
-    [0, 0, 0],
-    [0, 0, 0],
-    [0, 0, .1],
+  const [boxes, setBoxes] = useState<{ position: [number, number, number], rotation: [number, number, number], rotationSpeed: number }[]>([
+    { position: [0, 0, 0], rotation: [0, 0 - offy, 0], rotationSpeed: 0.0003 },
+    { position: [0, 0, 0], rotation: [0, 0.88 - offy, -0.5], rotationSpeed: 0.00006 },
+    { position: [0, 0, .1], rotation: [0, -0.68 - offy, 0.5], rotationSpeed: 0.00008 },
   ]);
 
   return (
@@ -57,8 +51,8 @@ export default function IntroThreeJs() {
           <ambientLight intensity={0} />
           <pointLight position={[-10, 0, 15]} intensity={400} />
           <pointLight position={[5, 15, 10]} intensity={300} />
-          {boxRotations.map((rotation, index) => (
-            <Box key={index} position={boxPositions[index]} rotation={rotation.slice(0, 3)} rotationSpeed={rotation[3]} />
+          {boxes.map((box, index) => (
+            <Box key={index} position={box.position} rotation={box.rotation} rotationSpeed={box.rotationSpeed} />
           ))}
         </group>
       </Canvas>

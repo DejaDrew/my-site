@@ -52,7 +52,7 @@ export default function Intro() {
             initial={{ opacity: 0, y: 100 }}
             animate={{ opacity: 1, y: 0 }}
           >
-            <span className="font-bold">Hi, I'm Andrew,</span> throughout my career I've worked as a{" "} <br />
+            <span className="font-bold">Hi, I'm Andrew.</span> Throughout my career I've worked as a{" "} <br />
             <span className="type-writer">
             <Typewriter
 								words={['Boomi Engineer','Director of Frontend', 'Sr. Systems Engineer', 'Enterpise Sales Engineer', 'Subject Matter Expert', 'UI/UX Specialist', 'Designer', 'Full Stack Developer', 'Consultant', 'Creative Director','Entrepreneur','Motion Artist']}

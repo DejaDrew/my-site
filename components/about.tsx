@@ -10,7 +10,7 @@ export default function About() {
   const { ref } = useSectionInView('About');
 
   return (
-    <motion.section className='mt-28 md:mt-40 md:text-lg xl:text-[1.3rem]  max-w-[65rem] xl:max-w-[80rem] md:text-center leading-7  md:leading-8 lg:leading-9  scroll-mt-32 inner-pad' ref={ref}  id="about" >
+    <motion.section className='mt-28 md:mt-40 md:text-lg xl:text-[1.3rem]  max-w-[65rem] xl:max-w-[65rem] md:text-center leading-7  md:leading-8 lg:leading-9  scroll-mt-32 inner-pad' ref={ref}  id="about" >
         
         <motion.div
           initial={{ opacity: 0 }}
@@ -20,7 +20,7 @@ export default function About() {
         >          
           <SectionHeading>About Me</SectionHeading>
 
-          <p className='mb-6 '>
+          <p className='mb-10'>
             For over two decades, I have been passionate about technology and how it can solve complex problems for businesses and customers. I started my own web development company at 17, and later became the Director of Frontend Development at AYC Media, where I designed and developed a custom CMS system and a front-end framework for rapid web development.  I am always eager to learn new technologies and share my knowledge and insights with others.
           </p>
           <p >

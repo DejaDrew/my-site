@@ -48,20 +48,20 @@ export default function Intro() {
           }
 
           <motion.h1
-            className="intro mb-7 md:mb-14 mt-8 px-4 text-2xl font-medium !leading-[1.6] text-[1.2rem] sm:text-[1.6rem] md:text-2xl xl:text-2xl  text-shadow-lg shadow-black/50"
+            className="intro mb-7 md:mb-14 mt-8 px-4  font-medium !leading-[1.6] text-[1rem] sm:text-[1.3rem] text-lg md:text-[1.5rem] xl:text-[1.6rem]  text-shadow-lg shadow-black/50"
             initial={{ opacity: 0, y: 100 }}
             animate={{ opacity: 1, y: 0 }}
           >
             <span className="font-bold">Hi, I'm Andrew,</span> throughout my career I've worked as a{" "} <br />
             <span className="type-writer">
             <Typewriter
-								words={['Director of Frontend', 'Sr. Systems Engineer', 'Sales Engineer', 'Subject Matter Expert', 'UI/UX Specialist', 'Designer', 'Full Stack Developer', 'Consultant', 'Creative Director','Business Owner','Photographer']}
+								words={['Director of Frontend', 'Sr. Systems Engineer', 'Enterpise Sales Engineer', 'Subject Matter Expert', 'UI/UX Specialist', 'Designer', 'Full Stack Developer', 'Consultant', 'Creative Director','Entrepreneur','Motion Artist', 'And more...']}
 								loop={99}
 								cursor
 								cursorStyle='_'
 								typeSpeed={50}
 								deleteSpeed={25}
-								delaySpeed={1750}	
+								delaySpeed={1600}	
 							/>
             </span>                       
             <p className=''>with over{" "}
@@ -70,19 +70,6 @@ export default function Intro() {
             <span className="font-bold">Let's connect!</span> </p>           
           </motion.h1>
           
-          {/*           
-          <motion.h1
-            className="intro mb-7 md:mb-14 mt-8 px-4 text-2xl font-medium !leading-[1.6] text-[1.2rem] sm:text-[1.6rem] md:text-3xl xl:text-3xl 2xl:text-[1.7vw] text-shadow-lg shadow-black/50"
-            initial={{ opacity: 0, y: 100 }}
-            animate={{ opacity: 1, y: 0 }}
-          >
-            <span className="font-bold">Hello, I'm Andrew.</span> I've done a lot over my career, with a recent focus on{" "}
-            <span className="font-bold"> Integration, Sales Engineering, SaaS, and AI</span> with over{" "}
-            <span className="font-bold">25 years of experience</span> in the technology field. I enjoy
-            building <span className="italic">relationships & enjoyable technology experiences</span>. {" "}
-            <span className="font-bold">Let's connect!</span>
-          </motion.h1> */}
-
           <motion.div
             className='flex flex-col sm:flex-row items-center justify-center gap-5 px-4 mb-20p text-lg font-medium'
             initial={{ opacity: 0, y: 100 }}

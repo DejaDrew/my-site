@@ -3,10 +3,15 @@ import Header from "@/components/header";
 import Footer from "@/components/footer";
 import ActiveSectionContextProvider from "@/context/active-section-context";
 import { Toaster } from "react-hot-toast";
-import { Inter } from 'next/font/google'
+import { Roboto } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/react';
 
-const inter = Inter({ subsets: ['latin'] })
+
+const font1 = Roboto({
+  weight: ['400', '700'],
+  style: ['normal', 'italic'],
+  subsets: ['latin'],
+})
 
 export const metadata = {
   title: 'Andrew | Personal Portfolio',
@@ -20,7 +25,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="!scroll-smooth">
-      <body className={`${inter.className} text-slate-300 relative`}>       
+      <body className={`${font1.className} text-slate-300 relative`}>       
         <ActiveSectionContextProvider>
           <Header />
           {children}

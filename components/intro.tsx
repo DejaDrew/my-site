@@ -48,14 +48,14 @@ export default function Intro() {
           }
 
           <motion.h1
-            className="intro mb-7 md:mb-14 mt-8 px-4  font-medium !leading-[1.6] text-[1rem] sm:text-[1.3rem] text-lg md:text-[1.5rem] xl:text-[1.6rem]  text-shadow-lg shadow-black/50"
+            className="intro mb-7 md:mb-14 mt-8 px-4  font-base !leading-[1.6] text-[1rem] sm:text-[1.3rem] text-lg md:text-[1.5rem] xl:text-[1.6rem]  text-shadow-lg shadow-black/50"
             initial={{ opacity: 0, y: 100 }}
             animate={{ opacity: 1, y: 0 }}
           >
             <span className="font-bold">Hi, I'm Andrew,</span> throughout my career I've worked as a{" "} <br />
             <span className="type-writer">
             <Typewriter
-								words={['Director of Frontend', 'Sr. Systems Engineer', 'Enterpise Sales Engineer', 'Subject Matter Expert', 'UI/UX Specialist', 'Designer', 'Full Stack Developer', 'Consultant', 'Creative Director','Entrepreneur','Motion Artist', 'And more...']}
+								words={['Director of Frontend', 'Sr. Systems Engineer', 'Enterpise Sales Engineer', 'Subject Matter Expert', 'UI/UX Specialist', 'Designer', 'Full Stack Developer', 'Consultant', 'Creative Director','Entrepreneur','Motion Artist']}
 								loop={99}
 								cursor
 								cursorStyle='_'

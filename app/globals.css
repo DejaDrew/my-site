@@ -15,6 +15,13 @@ body{
    background-image: url("/Noise.png");
 }
 
+.h2{
+  @apply text-4xl font-bold capitalize mb-8 md:mb-10  text-gray-100  text-center text-shadow-lg;
+  background: -webkit-linear-gradient(#fff 30%, #606b73);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .nav-container{
   background: linear-gradient(180deg, #595f66af 0%,  #22252c83 100%);
   @apply fixed top-0 left-1/2 h-[4.6rem] w-full rounded-none border-zinc-700  shadow-lg shadow-black/[0.3] backdrop-blur-[0.5rem] sm:top-6 sm:h-[3.4rem] sm:w-[34rem] sm:rounded-full;

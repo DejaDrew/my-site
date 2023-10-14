@@ -6,14 +6,14 @@ export default function IntroThreeJs() {
   
   const offy = .33;
 
-    
+
   function Box(props:any) {
     
-    const ref = useRef<any>();    
+    const ref = useRef<any>();
         
     useFrame((state, delta) => {
       if (ref.current) {
-        ref.current.rotation.y += (Math.random()*0.00017)+.000001;
+        ref.current.rotation.y += (.00008);
       }
     });
     
@@ -30,16 +30,14 @@ export default function IntroThreeJs() {
   }
 
   return (
-    <div className='three-bg h-full w-full opacity-60 absolute'>
+      <div className='three-bg h-full w-full opacity-60 absolute'>
 				<Canvas camera={{ fov: 55, position: [0, 0, 15] , rotation: [0,0,.65] }} >
 					<group >
 						<ambientLight intensity={6} />            
 						<pointLight position={[-10, 0, 15]} intensity={400} />
 						<Box position={[0, 0, 0]} rotation={[0, 0-offy, 0]} />
 						<Box position={[1, 0, 0]} rotation={[0, .88-offy, -.5]} />
-						<Box position={[0, -1.5, -2]} rotation={[0, -.68-offy, .5]} />	  
-
-            <Box position={[0, 0, 0]} rotation={[0, 0-offy, -50]} />           	
+						<Box position={[0, -1.5, -2]} rotation={[0, -.68-offy, .5]} />	  	
 					</group>
 				</Canvas>
 			</div>

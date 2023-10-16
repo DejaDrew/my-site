@@ -20,11 +20,11 @@ export default function IntroThreeJs() {
 
   return (
     <div className="three-bg h-full w-full opacity-[60%] absolute">
-      <Canvas shadows="soft" camera={{ fov: 55, position: [0, 0, 15], rotation: [0, 0, 0.62] }}>
+      <Canvas shadows="basic" camera={{ fov: 55, position: [0, 0, 15], rotation: [0, 0, 0.62] }}>
         <group>
           <ambientLight intensity={0} />
-          <pointLight position={[-10, 0, 15]} intensity={400} castShadow shadow-mapSize={[2048, 2048]} />
-          <pointLight position={[5, 15, 10]} intensity={300} castShadow shadow-mapSize={[2048, 2048]} />
+          <pointLight position={[-10, 0, 15]} intensity={400} castShadow shadow-mapSize={[1024, 1024]} />
+          <pointLight position={[5, 15, 10]} intensity={300} castShadow shadow-mapSize={[1024, 1024]} />
           {boxes.map((box, index) => (
             <Box key={index} position={box.position} rotation={box.rotation} rotationSpeed={box.rotationSpeed} />
           ))}

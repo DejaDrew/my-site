@@ -4,7 +4,6 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import React from 'react';
 import Link from 'next/link';
-import IntroStars from './intro-stars';
 import { useSectionInView } from '@/lib/hooks';
 import { useActiveSectionContext } from '@/context/active-section-context';
 import headshot from "@/public/Andrew.jpg";

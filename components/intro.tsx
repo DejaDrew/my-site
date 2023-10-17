@@ -2,17 +2,16 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import React, { useState, useEffect } from 'react'; // Import useState and useEffect
+import React, { useState, useEffect } from 'react'; 
 import Link from 'next/link';
 import { useSectionInView } from '@/lib/hooks';
 import { useActiveSectionContext } from '@/context/active-section-context';
-import headshot from "@/public/Andrew.jpg";
+import { Typewriter } from 'react-simple-typewriter'
 import { BsArrowRight, BsLinkedin } from 'react-icons/bs';
 import { HiDownload } from 'react-icons/hi';
-import IntroThreeJs from './intro-threejs';
-import { Typewriter } from 'react-simple-typewriter'
-
 import {AiOutlineLoading} from 'react-icons/ai';
+import IntroThreeJs from './intro-threejs';
+import headshot from "@/public/Andrew.jpg";
 
 
 export default function Intro() {
@@ -20,21 +19,23 @@ export default function Intro() {
   const { ref } = useSectionInView('Home', 0.5);
   const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
 
-  const [isLoading, setIsLoading] = useState(true); // Initialize isLoading state to true
+  const [isLoading, setIsLoading] = useState(true); 
 
   useEffect(() => {
-    setIsLoading(false); // Set isLoading to false after the page has loaded
+    setIsLoading(false); 
   }, []);
 
   return (
     <>
-      {isLoading && ( // Conditionally render the loading icon
+      
+      {isLoading && ( 
         <div className="fixed top-0 left-0 w-screen h-screen flex items-center justify-center">
           <div className="">
             <AiOutlineLoading className='animate-spin h-10 w-10 text-gray-500' />
           </div>
         </div>
       )}
+
       <motion.div 
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}

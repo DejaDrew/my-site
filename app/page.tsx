@@ -1,9 +1,11 @@
-import About from "@/components/about";
-import Contact from "@/components/contact";
-import Experience from "@/components/experience";
 import Intro from "@/components/intro";
 import SectionDivider from "@/components/section-divider";
-import Skills from "@/components/skills";
+import dynamic from "next/dynamic";
+
+const About = dynamic(() => import("@/components/about"), { ssr: true });
+const Contact = dynamic(() => import("@/components/contact"), { ssr: true });
+const Experience = dynamic(() => import("@/components/experience"), { ssr: true });
+const Skills = dynamic(() => import("@/components/skills"), { ssr: true });
 
 export default function Home() {
   return (
